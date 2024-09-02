@@ -30,17 +30,7 @@
 // let money1 = movie("Avengers", "Tony Stark", "2011");
 // money1.entertainment();
 
-// *******Array*********
-const sports = ["swimming", "Shooting", "jawline"];
 
-// for(const sport of sports){
-//   console.log(sport);
-// }
 
-console.log(sports.map(sport=>'game: '+sport));
-
-for(const sport of sports){
-  console.log(sport);
-}
 
 
