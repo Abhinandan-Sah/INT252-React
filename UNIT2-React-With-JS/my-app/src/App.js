@@ -4,6 +4,10 @@ import Never from './components/Never';
 import Car from './components/Car';
 import Carlist from './components/Carlist';
 import MovieList from './components/MovieList';
+import Zoo from './components/Zoo';
+import Animal from './components/Animal';
+import ClassApple from './components/ClassApple';
+import Fruit from './components/Fruit';
 
 
 
@@ -34,7 +38,10 @@ function App() {
         {/* <Car cost={200000000000000000000} model={"iphone16"} /> */}
         {/* <p>{x}{name}</p> */}
         {/* <Carlist /> */}
-        <MovieList />
+        {/* <MovieList /> */}
+        {/* <Animal /> */}
+        {/* <Zoo /> */}
+        <Fruit />
       </header>
     </div>
   );
