@@ -15,6 +15,8 @@ const MovieList = () => {
           <li key={movie.title}>
             <Cell title={movie.title} genra={movie.genra} />
           </li>
+
+          
         ))}
       </ul>
     </>
