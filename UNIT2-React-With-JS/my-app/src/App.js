@@ -8,8 +8,34 @@ import Zoo from './components/Zoo';
 import Animal from './components/Animal';
 import ClassApple from './components/ClassApple';
 import Fruit from './components/Fruit';
+import ImageChange from './components/ColorChangeComp';
+import ColorChangeCom from './components/ColorChangeComp';
+import UserForm from './components/UserForm';
+import Counter from './components/Counter';
+import Counter2 from './components/Counter2';
+import { useReducer } from 'react';
 
+const counterReducer = (state, action) => {
+  switch(action.type){
+    case "increment":
+      return {count: state.count + 1};
+    case "decrement":
+      return { count: state.count -1};
+    default:
+      return state;
+  }
+};
 
+const CounterApp = ()=>{
+  const [state, dispatch] = useReducer(counterReducer, {count: 0});
+  return (
+    <div>
+      <p>{state.count}</p>
+      <button onClick={()=> dispatch({type: "increment"})}>Increment</button>
+      <button onClick={()=> dispatch({type: "decrement"})}>Decrement</button>
+    </div>
+  )
+}
 
 function App() {
   let name = "avi"
@@ -41,7 +67,10 @@ function App() {
         {/* <MovieList /> */}
         {/* <Animal /> */}
         {/* <Zoo /> */}
-        <Fruit />
+        {/* <ColorChangeCom /> */}
+        {/* <UserForm /> */}
+        <Counter2 />
+
       </header>
     </div>
   );
