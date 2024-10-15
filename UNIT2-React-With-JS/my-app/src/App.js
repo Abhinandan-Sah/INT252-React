@@ -1,50 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
-import Never from './components/Never';
-import Car from './components/Car';
-import Carlist from './components/Carlist';
-import MovieList from './components/MovieList';
-import Zoo from './components/Zoo';
-import Animal from './components/Animal';
-import ClassApple from './components/ClassApple';
-import Fruit from './components/Fruit';
-import ImageChange from './components/ColorChangeComp';
-import ColorChangeCom from './components/ColorChangeComp';
-import UserForm from './components/UserForm';
-import Counter from './components/Counter';
-import Counter2 from './components/Counter2';
-import { useReducer } from 'react';
+import logo from "./logo.svg";
+import "./App.css";
+import Never from "./components/Never";
+import Car from "./components/Car";
+import Carlist from "./components/Carlist";
+import MovieList from "./components/MovieList";
+import Zoo from "./components/Zoo";
+import Animal from "./components/Animal";
+import ClassApple from "./components/ClassApple";
+import Fruit from "./components/Fruit";
+import ImageChange from "./components/ColorChangeComp";
+import ColorChangeCom from "./components/ColorChangeComp";
+import UserForm from "./components/UserForm";
+import Counter from "./components/Counter";
+import Counter2 from "./components/Counter2";
+import { useReducer } from "react";
 
 const counterReducer = (state, action) => {
-  switch(action.type){
+  switch (action.type) {
     case "increment":
-      return {count: state.count + 1};
+      return { count: state.count + 1 };
     case "decrement":
-      return { count: state.count -1};
+      return { count: state.count - 1 };
+    case "reset":
+      return { count: 0 };
     default:
       return state;
   }
 };
 
-const CounterApp = ()=>{
-  const [state, dispatch] = useReducer(counterReducer, {count: 0});
+const CounterApp = () => {
+  const {count, increase, decrease, reset} = useCounter (0);
   return (
     <div>
       <p>{state.count}</p>
-      <button onClick={()=> dispatch({type: "increment"})}>Increment</button>
-      <button onClick={()=> dispatch({type: "decrement"})}>Decrement</button>
+      <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
+      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
     </div>
-  )
-}
+  );
+};
 
 function App() {
-  let name = "avi"
-  const x= 24
-  const movies = [
-    {title: "The maze runner", genra: "sci-fric action advendure"},
-    {title: "The maze runner 2", genra: "sci-fric action advendure"},
-    {title: "The maze runner 3", genra: "sci-fric action advendure"},
-]
+ 
   return (
     <div className="App">
       <header className="App-header">
@@ -69,8 +66,8 @@ function App() {
         {/* <Zoo /> */}
         {/* <ColorChangeCom /> */}
         {/* <UserForm /> */}
-        <Counter2 />
-
+        {/* <Counter2 /> */}
+        <CounterApp />
       </header>
     </div>
   );
