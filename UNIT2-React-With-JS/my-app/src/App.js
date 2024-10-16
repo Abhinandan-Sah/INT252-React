@@ -14,31 +14,32 @@ import UserForm from "./components/UserForm";
 import Counter from "./components/Counter";
 import Counter2 from "./components/Counter2";
 import { useReducer } from "react";
+import Table from "./components/Table";
 
-const counterReducer = (state, action) => {
-  switch (action.type) {
-    case "increment":
-      return { count: state.count + 1 };
-    case "decrement":
-      return { count: state.count - 1 };
-    case "reset":
-      return { count: 0 };
-    default:
-      return state;
-  }
-};
+// const counterReducer = (state, action) => {
+//   switch (action.type) {
+//     case "increment":
+//       return { count: state.count + 1 };
+//     case "decrement":
+//       return { count: state.count - 1 };
+//     case "reset":
+//       return { count: 0 };
+//     default:
+//       return state;
+//   }
+// };
 
-const CounterApp = () => {
-  const {count, increase, decrease, reset} = useCounter (0);
-  return (
-    <div>
-      <p>{state.count}</p>
-      <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
-      <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
-      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
-    </div>
-  );
-};
+// const CounterApp = () => {
+//   const {count, increase, decrease, reset} = useCounter (0);
+//   return (
+//     <div>
+//       <p>{state.count}</p>
+//       <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
+//       <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
+//       <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+//     </div>
+//   );
+// };
 
 function App() {
  
@@ -67,7 +68,8 @@ function App() {
         {/* <ColorChangeCom /> */}
         {/* <UserForm /> */}
         {/* <Counter2 /> */}
-        <CounterApp />
+        {/* <CounterApp /> */}
+        <Table />
       </header>
     </div>
   );
