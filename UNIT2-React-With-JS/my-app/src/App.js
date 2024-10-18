@@ -15,6 +15,7 @@ import Counter from "./components/Counter";
 import Counter2 from "./components/Counter2";
 import { useReducer } from "react";
 import Table from "./components/Table";
+import TableHeader from "./components/Table.jsx";
 
 // const counterReducer = (state, action) => {
 //   switch (action.type) {
@@ -69,7 +70,7 @@ function App() {
         {/* <UserForm /> */}
         {/* <Counter2 /> */}
         {/* <CounterApp /> */}
-        <Table />
+        <TableHeader />
       </header>
     </div>
   );

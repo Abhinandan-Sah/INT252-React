@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 const Counter = () => {
     const [count, setCount] = useState(0);
+    const []
 
     const handleIncrement = () => {
             setCount(count + 1);
@@ -27,6 +28,7 @@ const Counter = () => {
         <button onClick={handleIncrement}>Increment</button>
         <button onClick={handleDecrement}>Decrement</button>
         <button onClick={()=>{clearInterval(count)}}>clear</button>
+
     </div>
   )
 }
