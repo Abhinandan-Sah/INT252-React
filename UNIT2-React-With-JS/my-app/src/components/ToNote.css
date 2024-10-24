@@ -1,0 +1,47 @@
+/* ToNote.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #302e2e;
+}
+
+tr:hover {
+    background-color: #1e1c1c;
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

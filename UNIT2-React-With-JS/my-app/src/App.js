@@ -16,6 +16,7 @@ import Counter2 from "./components/Counter2";
 import { useReducer } from "react";
 import Table from "./components/Table";
 import TableHeader from "./components/Table.jsx";
+import ToNote from "./components/ToNote.jsx";
 
 // const counterReducer = (state, action) => {
 //   switch (action.type) {
@@ -70,7 +71,8 @@ function App() {
         {/* <UserForm /> */}
         {/* <Counter2 /> */}
         {/* <CounterApp /> */}
-        <TableHeader />
+        {/* <TableHeader /> */}
+        <ToNote />
       </header>
     </div>
   );
