@@ -10,6 +10,10 @@ const Car = ({cost, model}) => {
         <h1>{car2}</h1>
         <h1>My car color is {color}</h1>
         <h2>{cost} dinar</h2>
+        <h1>{car1}</h1>
+        <h1>{car2}</h1>
+        <h1>My car color is {color}</h1>
+        <h2>{cost} dinar</h2>
     </>
   )
 }
